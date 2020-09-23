@@ -8,4 +8,10 @@
   - [Headings](pages/headings.md)
 
 - React
+
   - [Basics](pages/react/basics.md)
+  - [Hooks](pages/react/react-hooks.md)
+  - [Redux](pages/react/redux.md)
+
+- Typescript
+- [Typescript](pages/typescript/ts-basics.md)
