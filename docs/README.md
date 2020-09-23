@@ -20,5 +20,3 @@ Get the right tool to get started on writing documentation for your app/ service
   - Netlify or gh-pages or other as per your preferences
 
 ---
-
-Made in :heart: with Doscify
