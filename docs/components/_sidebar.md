@@ -7,6 +7,11 @@
   - [Text Formatting](pages/usage.md)
   - [Headings](pages/headings.md)
 
+- Javascript
+
+  - [Introduction](pages/javascript/intro.md)
+  - [Fundamentals](pages/javascript/fundamentals.md)
+
 - React
 
   - [Basics](pages/react/basics.md)

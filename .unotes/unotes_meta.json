@@ -1,0 +1,62 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "docs": {
+      "name": "docs",
+      "isOrdered": true,
+      "folders": {
+        "components": {
+          "name": "components",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "pages": {
+          "name": "pages",
+          "isOrdered": true,
+          "folders": {
+            "javascript": {
+              "name": "javascript",
+              "isOrdered": true,
+              "folders": {},
+              "files": {
+                "intro": 0,
+                "fundamentals": 1
+              }
+            },
+            "react": {
+              "name": "react",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "typescript": {
+              "name": "typescript",
+              "isOrdered": true,
+              "folders": {},
+              "files": {
+                "ts-basics": 0
+              }
+            }
+          },
+          "files": {
+            "sample-document": 0,
+            "headings": 1,
+            "usage": 2
+          }
+        },
+        "static": {
+          "name": "static",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {
+        "README": 0
+      }
+    }
+  },
+  "files": {}
+}

@@ -1,20 +1,20 @@
 ## Emphasis
 
-_This text will be italic_
+*This text will be italic*
 
-```md
+``` md
 _This text will be italic_
 ```
 
 **This text will be bold**
 
-```md
+``` md
 **This will also be bold**
 ```
 
-_You **can** combine them_
+*You **can** combine them*
 
-```md
+``` md
 _You **can** combine them_
 ```
 
@@ -22,7 +22,7 @@ _You **can** combine them_
 
 Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
 
-```md
+``` md
 ~~this~~
 ```
 
@@ -30,12 +30,12 @@ Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
 
 ### Unordered
 
-- Item 1
-- Item 2
-  - Item 2a
-  - Item 2b
+* Item 1
+* Item 2
+    * Item 2a
+    * Item 2b
 
-```md
+``` md
 - Item 1
 - Item 2
   - Item 2a
@@ -45,12 +45,12 @@ Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
 ### Ordered
 
 1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
+2. Item 2
+3. Item 3
+    1. Item 3a
+    2. Item 3b
 
-```md
+``` md
 1. Item 1
 1. Item 2
 1. Item 3
@@ -69,7 +69,7 @@ https://google.com - automatic!
 The following image is loaded with "Sample Image" as alternative text
 ![Sample Image](https://picsum.photos/200/300)
 
-```md
+``` md
 ![Alt Text](url)
 ```
 
@@ -79,7 +79,7 @@ The following image is loaded with "Sample Image" as alternative text
 
 > This is basic quoted text
 
-```md
+``` md
 > This is basic quoted text
 ```
 
@@ -87,7 +87,7 @@ The following image is loaded with "Sample Image" as alternative text
 
 ?>This is Docsify Specific Informative Quote text
 
-```md
+``` md
 ?>This is Docsify Specific Informative Quote text
 ```
 
@@ -95,7 +95,7 @@ The following image is loaded with "Sample Image" as alternative text
 
 !>This is Docsify Specific Warning/Important Quote text
 
-```md
+``` md
 !>This is Docsify Specific Warning/Important Quote text
 ```
 
@@ -106,15 +106,7 @@ The following image is loaded with "Sample Image" as alternative text
 You need to insert a space between the html and markdown content.
 This is useful for rendering markdown content in the details element.
 
-<details>
-<summary>Summary View Collapsible(Click to expand)</summary>
-
-- 123
-- 456
-
-</details>
-
-```md
+``` md
 <details>
 <summary>Summary View Collapsible(Click to expand)</summary>
 
@@ -126,14 +118,11 @@ This is useful for rendering markdown content in the details element.
 
 Or markdown content can be wrapped in html tag.
 
-<div style='color: red'>
+* 123
+* 456
 
-- 123
-- 456
-
-</div>
-
-```md
+<br>
+``` md
 <div style='color: red'>
 
 - 123
