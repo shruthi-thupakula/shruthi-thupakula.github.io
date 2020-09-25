@@ -71,3 +71,14 @@ function showMessage(parameters) {
   console.log("Hello everyone!");
 }
 ```
+
+**Local Variable -** A variable declared inside a function is only visible inside that function.
+
+**Outer Variables -** The function has full access to the outer variable. It can modify it as well.
+
+**Function starting with…**
+
+- "get…" – return a value,
+- "calc…" – calculate something,
+- "create…" – create something,
+- "check…" – check something and return a boolean, etc.
