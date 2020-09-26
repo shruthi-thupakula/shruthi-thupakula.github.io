@@ -48,7 +48,7 @@ There are  8 basic data types in JS.
 3. string - for strings.
 4. boolean - for logical values: true/false.
 5. null - a type with a single value null, meaning “empty” or “does not exist”.
-6. undefined - undefined – a type with a single value undefined, meaning “not assigned”.
+6. undefined – a type with a single value undefined, meaning “not assigned”.
 7. object and symbol - for complex data structures and unique identifiers.
 ```
 
