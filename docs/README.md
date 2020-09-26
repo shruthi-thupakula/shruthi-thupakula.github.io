@@ -1,6 +1,12 @@
-# Homepage
+**Hi, I'm Shruthi Thupakula** 👋
 
-> Hey congrats, you are a one step ahead of building your own docs-site/ blog :tada:
+- 💻 Working as Software Engineer .
+
+- ⚡ Expertise in React JS, Javascript , Typescript , Redux.
+
+- 👯 I’m looking to collaborate on a project.
+
+- 🔭 My Docs.
 
 [![Made with Docsify](https://img.shields.io/badge/made_with-docsify.js-blue.svg)](https://docsify.js.org/)
 

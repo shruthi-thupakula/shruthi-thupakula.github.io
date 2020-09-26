@@ -32,6 +32,11 @@ a = "World!"; //value changed
 **let & const**-blocked scope
 <br>
 
+A variable name can include:
+
+- Letters and digits, but the first character may not be a digit.
+- Characters \$ and \_ are normal, on par with letters.
+
 ###### Data Types
 
 There are  8 basic data types in JS.
@@ -52,10 +57,62 @@ And `typeof` operator allows us to see which type is stored in a variable.
 
 **alert**  -  shows a message
 
+```javascript
+alert(message);
+```
+
 **prompt**  -  shows a message asking the user to input text. It returns the text or, if _Cancel_ button is clicked.
 
+```javascript
+prompt(question, [default])
+```
+
 **confirm**  -  shows a message and waits for the user to press _OK_ or _Cancel_. It returns true for _OK_ and false for _Cancel_
-<br>
+
+```javascript
+confirm(question);
+```
+
+- Ask a question and suggest to choose between Ok and Cancel. The choice is returned as true/false.
+
+**Loops:** In Javascript or any programming language, we have loops. Loops are used to do any repetition task until a condition is fulfilled each time with a different value.
+
+- three types of loops:
+
+```javascript
+// 1
+while (condition) {
+  ...
+}
+
+// 2
+do {
+  ...
+} while (condition);
+
+// 3
+for(let i = 0; i < 10; i++) {
+  ...
+}
+```
+
+**switch statement:** The “switch” construct can replace multiple if checks. It uses === (strict equality) for comparisons.
+
+```javascript
+switch(x) {
+  case 'value1':  // if (x === 'value1')
+    ...
+    [break]
+
+  case 'value2':  // if (x === 'value2')
+    ...
+    [break]
+
+  default:
+    ...
+    [break]
+}
+```
 
 ## Functions
 
@@ -64,13 +121,27 @@ And `typeof` operator allows us to see which type is stored in a variable.
 
 ###### Function Declaration
 
-To declare a function, use the function keyword,a list of parameters,and the function body as follows:
+- To declare a function, use the function keyword,a list of parameters,and the function body as follows:
 
 ```javascript
-function showMessage(parameters) {
-  console.log("Hello everyone!");
+// Function Declaration
+function sum(a, b) {
+  return a + b;
 }
 ```
+
+- Function Declarations are processed before the code block is executed. They are visible everywhere in the block.
+
+```javascript
+// Function Expression
+let sum = function (a, b) {
+  return a + b;
+};
+```
+
+- Function Expression: a function, created inside an expression or inside another syntax construct. Here, the function is created at the right side of the “assignment expression” = :
+
+- Function Expressions are created when the execution flow reaches them.
 
 **Local Variable -** A variable declared inside a function is only visible inside that function.
 
@@ -82,3 +153,25 @@ function showMessage(parameters) {
 - "calc…" – calculate something,
 - "create…" – create something,
 - "check…" – check something and return a boolean, etc.
+
+**Arrow Functions -** There’s another very simple syntax for creating functions, that’s often better than Function Expressions.It’s called “arrow functions”, because it looks like this:
+
+?>let func = (arg1, arg2, ...argN) => expression
+
+**Example :**
+
+```javascript
+let sum = (a, b) => a + b;
+```
+
+**Multiline arrow functions:**
+
+- **(...args) => { body }** – brackets allow us to write multiple statements inside the function, but we need an explicit _return_ to return something.
+
+```javascript
+let sum = (a, b) => {
+  // the curly brace opens a multiline function
+  let result = a + b;
+  return result; // if we use curly braces, then we need an explicit "return"
+};
+```
