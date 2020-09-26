@@ -42,14 +42,13 @@ A variable name can include:
 
 There are  8 basic data types in JS.
 
-1. number
-2. int
-3. string
-4. boolean
-5. null
-6. undefined
-7. object
-8. symbol
+1. number - for both floating-point and integer numbers.
+2. bigint - for integer numbers of arbitrary length.
+3. string - for strings.
+4. boolean - for logical values: true/false.
+5. null - a type with a single value null, meaning “empty” or “does not exist”.
+6. undefined - undefined – a type with a single value undefined, meaning “not assigned”.
+7. object and symbol - for complex data structures and unique identifiers.
 
 And `typeof` operator allows us to see which type is stored in a variable.
 <br>
