@@ -10,7 +10,10 @@
           "name": "components",
           "isOrdered": true,
           "folders": {},
-          "files": {}
+          "files": {
+            "_sidebar": 0,
+            "_coverpage": 1
+          }
         },
         "pages": {
           "name": "pages",
@@ -29,7 +32,11 @@
               "name": "react",
               "isOrdered": true,
               "folders": {},
-              "files": {}
+              "files": {
+                "react-hooks": 0,
+                "basics": 1,
+                "redux": 2
+              }
             },
             "typescript": {
               "name": "typescript",
@@ -41,9 +48,8 @@
             }
           },
           "files": {
-            "sample-document": 0,
-            "headings": 1,
-            "usage": 2
+            "headings": 0,
+            "markdown-usage": 1
           }
         },
         "static": {
