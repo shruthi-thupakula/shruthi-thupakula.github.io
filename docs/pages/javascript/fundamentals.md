@@ -77,7 +77,58 @@ confirm(question);
 
 - Ask a question and suggest to choose between Ok and Cancel. The choice is returned as true/false.
 
-**Loops:** In Javascript or any programming language, we have loops. Loops are used to do any repetition task until a condition is fulfilled each time with a different value.
+**JavaScript strings :**
+
+- JavaScript strings are primitive values. JavaScript strings are also immutable.
+
+1. **Getting the length of the string**
+
+The length property returns the length of a string:
+
+```javascript
+let str = "Good Morning!";
+console.log(str.length); // 13
+```
+
+2. **Accessing characters**
+
+To access the characters in a string, you use the array-like [] notation with the zero-based index.
+
+```javascript
+let str = "Hello";
+console.log(str[0]); // "H"
+```
+
+3. **Concatenating strings**
+   To concatenate two or more strings you use the concat().
+
+```javascript
+let firstName = "John";
+let fullName = firstName.concat(" ", "Doe");
+console.log(fullName); // "John Doe"
+```
+
+4. **Removing whitespace characters**
+
+To remove all leading whitespace characters of a string, you use the trim().
+
+```javascript
+let rawString = " Hi  ";
+let strippedString = rawString.trim();
+console.log(strippedString); // "Hi"
+```
+
+5. **Changing cases**
+
+To change cases of a string, you use toLowerCase() and toUpperCase() methods.
+
+6. **Replacing substrings**
+
+To replace a substring in a string, you use the replace() method.
+
+### **Loops:**
+
+In Javascript or any programming language, we have loops. Loops are used to do any repetition task until a condition is fulfilled each time with a different value.
 
 - three types of loops:
 
