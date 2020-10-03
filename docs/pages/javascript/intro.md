@@ -11,8 +11,3 @@
 **Variable Declaration**
 
 **Functions and its Performances**
-<br>
-
-```
-
-```

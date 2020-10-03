@@ -13,6 +13,10 @@
   - [Hooks](pages/react/react-hooks.md)
   - [Redux](pages/react/redux.md)
 
+- JSON vs XML
+
+  - [Get Started](pages/json-vs-xml/intro.md)
+
 - Typescript
 
 - [Typescript](pages/typescript/ts-basics.md)
