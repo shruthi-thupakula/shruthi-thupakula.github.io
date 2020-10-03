@@ -44,9 +44,9 @@ var myObj = JSON.parse(myJSON);
 
 ```xml
 <root>
-  <child>
-    <subchild>.....</subchild>
-  </child>
+   <child>
+      <subChild>.....</subChild>
+   </child>
 </root>
 ```
 
@@ -61,7 +61,7 @@ var myObj = JSON.parse(myJSON);
 ## JSON vs XML
 
 - JSON and XML can be used to receive data from a web server.
-- JSON object has a type whereas XML data is typeless.
+- JSON object has a type whereas XML data is type-less.
 - JSON does not provide namespace support while XML provides namespaces support.
 - JSON has no display capabilities whereas XML offers the capability to display data.
 - JSON is less secured whereas XML is more secure compared to JSON.
@@ -80,19 +80,40 @@ var myObj = JSON.parse(myJSON);
 **JSON example:**
 
 ```javascript
-{"employees":[
-  { "firstName":"John", "lastName":"Doe" },
-  { "firstName":"Anna", "lastName":"Smith" },
-  { "firstName":"Peter", "lastName":"Jones" }
-]}
+{
+   "employees":[
+      {
+         "firstName":"John",
+         "lastName":"Doe"
+      },
+      {
+         "firstName":"Anna",
+         "lastName":"Smith"
+      },
+      {
+         "firstName":"Peter",
+         "lastName":"Jones"
+      }
+   ]
+}
 ```
 
 **XML example:**
 
 ```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <employees>
-  <employee> <firstName>John</firstName> <lastName>Doe</lastName> </employee>
-  <employee> <firstName>Anna</firstName> <lastName>Smith</lastName> </employee>
-  <employee> <firstName>Peter</firstName> <lastName>Jones</lastName> </employee>
+   <employee>
+      <firstName>John</firstName>
+      <lastName>Doe</lastName>
+   </employee>
+   <employee>
+      <firstName>Anna</firstName>
+      <lastName>Smith</lastName>
+   </employee>
+   <employee>
+      <firstName>Peter</firstName>
+      <lastName>Jones</lastName>
+   </employee>
 </employees>
 ```

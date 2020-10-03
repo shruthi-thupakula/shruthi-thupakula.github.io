@@ -1,6 +1,6 @@
 ### **Javascript Intro**
 
-> **JavaScript** is loosely tupled language
+> **JavaScript** is loosely typed language
 
 - **JavaScript**  came from the java but javascript has less rules.
   means whatever you do, it accepts and  it won't rejects anything.
