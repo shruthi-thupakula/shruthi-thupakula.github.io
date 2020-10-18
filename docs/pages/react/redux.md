@@ -3,8 +3,8 @@
 **Redux**: State management tool/ library.
 
 - When the application has lot of data management mechanism which required to be consistent among multiple areas or components ( i.e, all of them should use the same data)
-- When passing data to deeply nested children is hard
-  The above mentioned use cases are some areas we can use the redux which is immutable state (no modifications are allowed)
+- When passing data to deeply nested children is hard.
+- The above mentioned use cases are some areas we can use the redux which is immutable state (no modifications are allowed)
 
 1. **Action**: specifies the logic in reducer to be executed.
 1. **Reducer**: where the modification ( creation of new state) logic is handled.

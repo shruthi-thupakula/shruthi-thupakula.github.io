@@ -21,6 +21,10 @@
 
 - [Typescript](pages/typescript/ts-basics.md)
 
+- Angular JS
+
+- [Basics](pages/angular/intro.md)
+
 - Markdown Usage
 
   - [Text Formatting](pages/markdown-usage.md)

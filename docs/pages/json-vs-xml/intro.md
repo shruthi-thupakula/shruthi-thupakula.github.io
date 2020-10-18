@@ -4,6 +4,7 @@
 - JSON is text, written with JavaScript object notation.
 - JSON is a syntax for storing and exchanging data.
 - JSON is a lightweight data-interchange format.
+- It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa).
 
 > JSON uses JavaScript syntax, but the JSON format is text only.
 > Text can be read and used as a data format by any programming language.
