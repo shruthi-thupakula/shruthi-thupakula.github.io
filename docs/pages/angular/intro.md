@@ -85,12 +85,12 @@ MVC architecture with AngularJS makes it easier to build client-side web applica
 
 **AngularJS is perfect for database CRUD (Create Read Update Delete) applications.**
 
-#### Differences between AngularJS & JS:
+#### AngularJS vs JS:
 
 - AngularJS expressions do not support conditionals, loops, and exceptions, while JavaScript expressions do.
 - AngularJS expressions support filters, while JavaScript expressions do not.
 
-#### Differences between AngularJS & ReactJS:
+#### AngularJS vs ReactJS:
 
 - React is a library while Angular is a framework.
 - ReactJS is easy to understand and execute while AngularJS is difficult due to third-party syntax and libraries.

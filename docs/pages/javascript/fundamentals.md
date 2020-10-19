@@ -202,10 +202,10 @@ let sum = function (a, b) {
 
 **Function starting with…**
 
-- "get…" – return a value,
-- "calc…" – calculate something,
-- "create…" – create something,
-- "check…" – check something and return a boolean, etc.
+- `get…` – return a value,
+- `calc…` – calculate something,
+- `create…` – create something,
+- `check…` – check something and return a boolean, etc.
 
 **Arrow Functions -** There’s another very simple syntax for creating functions, that’s often better than Function Expressions.It’s called “arrow functions”, because it looks like this:
 
@@ -231,8 +231,98 @@ let sum = (a, b) => {
 
 ## Objects
 
-In JavaScript, almost "everything" is an object.
+In JavaScript, almost everything is an object.
 
-- Booleans,Numbers andStrings can be objects (if defined with the new keyword).
-- Dates,Maths, Regular expressions, Arrays, Functions and Objects are always objects.
+- Booleans,Numbers and Strings can be objects (if defined with the new keyword).
+- Dates are always objects.It stores the information about the date and time.
+- Arrays are always objects.It stores the ordered data collections.
+- Maths,Regular expressions,Functions and Objects are always objects.
 - All JavaScript values, except primitives, are objects.
+
+##### Object Properties:
+
+Object stores the properties (key-value pairs), where:
+
+- Property `keys` must be strings or symbols (usually strings) and `values` can be of any type.
+- To access a property, we can use:
+  - The dot notation: `obj.property`
+  - Square brackets notation `obj["property"]`. Square brackets allow to take the key from a variable, like `obj[varWithKey]`.
+- Properties can usually be changed, added, and deleted, but some are read only.
+
+  - To delete a property: `delete obj.prop`
+
+- There are two kinds of object properties.
+
+1. Data properties
+
+The data property sets or returns the value of the data attribute of an <object> element.
+The data attribute specifies the URL of the resource to be used by the object.
+
+2. Accessor properties
+
+- Accessor properties are represented by “getter” and “setter” methods.
+  - Getters give you a way to define a property of an object, but they do not calculate the property's value until it is accessed.
+  - Setter can be used to execute a function whenever a specified property is attempted to be changed.
+- In an object literal they are denoted by `get` and `set`.
+  - `get` – a function without arguments, that works when a property is read.
+  - `set` – a function with one argument, that is called when the property is set.
+
+```javascript
+let obj = {
+  get propName() {
+    // getter, the code executed on getting obj.propName
+  },
+
+  set propName(value) {
+    // setter, the code executed on setting obj.propName = value
+  },
+};
+```
+
+**Example:**
+
+```javascript
+let user = {
+  name: "John",
+  surname: "Smith",
+
+  get fullName() {
+    return `${this.name} ${this.surname}`;
+  },
+
+  set fullName(value) {
+    [this.name, this.surname] = value.split(" ");
+  },
+};
+
+// set fullName is executed with the given value.
+user.fullName = "Alice Cooper";
+
+alert(user.name); // Alice
+alert(user.surname); // Cooper
+```
+
+###### Advantages of using Getters and Setters:
+
+- It gives simpler syntax.
+- It allows equal syntax for properties and methods.
+- It can secure better data quality.
+- It can securing access to data properties and adding extra logic to properties before getting or setting their values.
+
+##### Object Methods:
+
+- Functions that are stored in object properties are called “methods”.
+- Methods are functions stored as object properties.
+- Methods can reference the object as `this`. To access the object, a method can use the `this` keyword.
+- When a function is called in the “method”,syntax is `object.method()`,the value of `this` during the call is object.
+- In Arrow functions we don't have `this`. When this is accessed inside an arrow function, it is taken from outside.
+
+##### Constructor function:
+
+Constructor functions technically are regular functions. There are two conventions though:
+
+1. They are named with capital letter first.
+2. They should be executed only with `new` operator.
+
+**Object Prototypes:** All JavaScript objects inherit properties and methods from a prototype:
+`Object.prototype`
