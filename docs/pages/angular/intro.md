@@ -3,8 +3,9 @@
 - Angular is a Javascript framework that is used for building web, desktop, and mobile applications.
 - Development of Angular applications involves usage of Typescript, which is a superset of Javascript, along with HTML, CSS etc.
 - AngularJS extends HTML attributes with Directives(ng-directives).
-- AngularJS expressions can be written inside double braces: {{ expression }}.
-- AngularJS expressions can also be written inside a directive: ng-bind="expression".
+- AngularJS expressions can be written inside double braces `{{ expression }}`
+- AngularJS expressions can also be written inside a directive:
+  `ng-bind="expression"`
 - AngularJS numbers are like JavaScript numbers:
 
 ```javascript
@@ -29,7 +30,7 @@ AngularJS arrays are like JavaScript arrays:
 ng - init = "points=[1,15,19,2,40]";
 ```
 
-- The ng-init directive initializes application data.Where _ng-_ means angular.
+- The `ng-init` directive initializes application data.Where _ng-_ means angular.
 
 #### Modules & Controllers:
 
@@ -43,7 +44,7 @@ ng - init = "points=[1,15,19,2,40]";
 
 ##### ng-model Directive
 
-- ng-model directive you can bind the value of an input field to a variable created in AngularJS.
+- With ng-model directive you can bind the value of an input field to a variable created in AngularJS.
 - ng-model directive can provide type validation for application data (number, e-mail, required).
 - ng-model directive can provide status for application data (valid, dirty, touched, error).
 - ng-model directive provides a two-way binding between the model and the view
@@ -56,7 +57,7 @@ ng - init = "points=[1,15,19,2,40]";
 
 ## MVC:
 
-MVC with AngularJS makes it easier to build client-side web applications. All the necessary elements are developed separately and combined automatically, which saves additional time and effort.
+MVC architecture with AngularJS makes it easier to build client-side web applications. All the necessary elements are developed separately and combined automatically, which saves additional time and effort.
 
 **Model:** AngularJS applications usually have a data model. The data model is a collection of data available for the application.
 
@@ -69,32 +70,32 @@ MVC with AngularJS makes it easier to build client-side web applications. All th
 
 - Because of the immediate synchronization of the model and the view, the controller can be completely separated from the view, and simply concentrate on the model data.
 - To the data binding in AngularJS, the view will reflect any changes made in the controller.
-- ng-controller directive defines the application controller.
+- `ng-controller` directive defines the application controller.
 - A controller is a JavaScript Object, created by a standard JavaScript object constructor.
 
 #### AngularJS Data Binding
 
 - Data binding in AngularJS is the synchronization between the model and the view.
-- Data binding: When data in the model changes, the view reflects the change, and when data in the view changes, the model is updated as well. This happens immediately and automatically.
+- **Data binding:** When data in the model changes, the view reflects the change, and when data in the view changes, the model is updated as well. This happens immediately and automatically.
 
 #### Incremental DOM (IDOM)
 
-- It is same as virtual DOM, but with a different approach.Instead of building a representation of the DOM tree in memory, it just uses the real DOM to diff against new trees.
+- It is same as Virtual DOM(VDOM-which is used in ReactJS), but with a different approach.Unlike building a representation of the DOM tree in memory(which is done by VDOM), it just uses the real DOM to diff against new trees.
 - Every component gets compiled into a series of instructions. Those instructions create DOM trees and update them in-place when the data changes.
 
-**Angular JS is perfect for database CRUD (Create Read Update Delete) applications.**
+**AngularJS is perfect for database CRUD (Create Read Update Delete) applications.**
 
-#### Angular & JS differences:
+#### Differences between AngularJS & JS:
 
 - AngularJS expressions do not support conditionals, loops, and exceptions, while JavaScript expressions do.
 - AngularJS expressions support filters, while JavaScript expressions do not.
 
-#### React JS vs Angular JS
+#### Differences between AngularJS & ReactJS:
 
 - React is a library while Angular is a framework.
-- ReactJs is easy to understand and execute while AngularJs is difficult due to third-party syntax and libraries.
-- ReactJs is on Open Source Framework while AngularJs is on MVC framework.
-- ReactJS works on Virtual DOM while AngularJs works on Regular DOM.
-- The main difference is state of its management. AngularJS has data binding, whereas React is generally augmented by Redux to give unidirectional data flow and work with immutable data.
+- ReactJS is easy to understand and execute while AngularJS is difficult due to third-party syntax and libraries.
+- ReactJS is on Open Source Library while AngularJS is on MVC framework.
+- ReactJS works on Virtual DOM while AngularJS works on Regular DOM.
+- The key difference lies in it's state management. AngularJS has data binding, whereas React is generally augmented by Redux to give unidirectional data flow and work with immutable data.
 - React offers better rendering performance than Angular because of its virtual DOM.
 - Angular is based on Typescript and React is based on Javascript.

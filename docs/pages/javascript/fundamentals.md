@@ -228,3 +228,11 @@ let sum = (a, b) => {
   return result; // if we use curly braces, then we need an explicit "return"
 };
 ```
+
+## Objects
+
+In JavaScript, almost "everything" is an object.
+
+- Booleans,Numbers andStrings can be objects (if defined with the new keyword).
+- Dates,Maths, Regular expressions, Arrays, Functions and Objects are always objects.
+- All JavaScript values, except primitives, are objects.
