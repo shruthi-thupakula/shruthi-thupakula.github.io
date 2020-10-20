@@ -326,3 +326,167 @@ Constructor functions technically are regular functions. There are two conventio
 
 **Object Prototypes:** All JavaScript objects inherit properties and methods from a prototype:
 `Object.prototype`
+
+## Arrays
+
+- An array is a special variable, which can hold more than one value at a time.
+
+```javascript
+// syntaxes for creating an empty array
+let arr = new Array();
+let arr = [];
+```
+
+- The above two syntaxes do exactly the same. There is no need to use new Array().
+- For simplicity, readability and execution speed, use the second one (the array literal method).
+
+##### Arrays are Objects
+
+- Arrays are a special type of objects.The typeOf operator in JavaScript returns "object" for arrays.
+
+**Array:** Arrays use numbers to access its "elements".
+
+```javascript
+var person = ["Shruthi", "Docs", 20];
+console.log(person[0]); //Shruthi
+```
+
+**Object:** Objects use names to access its "members".
+
+```javascript
+var person = { firstName: "Shruthi", lastName: "Docs", age: 20 };
+console.log(firstName.person); //Shruthi
+```
+
+#### Array Properties and Methods
+
+- The `length` property of an array returns the length of an array (the number of array elements).
+- `push()` adds an element to the end.
+- `pop()` removes an element from the end.
+- `shift()` extracts the first element of the array and returns it.
+- `unshift()` add the element to the beginning of the array.
+- `toString()` converts an array to a string of (comma separated) array values.
+- `join()` method also joins all array elements into a string.
+- `split()/join()` – convert a string to array and back.
+- `splice()` method can do everything: insert, remove and replace elements.
+
+slice() syntax:
+`arr.slice([start], [end])`
+
+```javascript
+let fruits = ["Apple", "Orange", "Pear"];
+
+alert(fruits.length); // 3
+
+alert(fruits.push("Mango");); // Apple, Orange, Pear, Mango
+
+alert(fruits.pop()); // remove "Pear" and alert it
+
+alert(fruits.shift()); // Orange, Pear(remove Apple)
+
+alert(fruits.unshift('Banana')); //Banana, Apple, Orange, Pear
+
+alert(fruits.toString()); //Apple,Orange,Pear
+
+alert(fruits.join(" @ ")); //Apple @ Orange @ Pear
+
+alert(fruits.splice(1, 1)); // from index 1 remove 1 element(Apple, Pear)
+
+ alert(fruits.splice(0, 2, "Banana")); // remove first 2 elements and replace them with another(Banana,Orange,Pear)
+
+// remove 2 first elements
+let removed = fruits.splice(0, 2);
+alert( removed ); // "Apple", "Orange" <-- array of removed elements
+
+// insert Banana, Mango
+alert(fruits.splice(1, 0, "Banana", "Mango")); //Apple, Banana, Mango, Orange, Pear
+```
+
+**forEach():**
+
+- `forEach()`method allows to run a function for every element of the array.
+
+forEach() syntax:
+
+```javascript
+arr.forEach(function (item, index, array) {
+  // ... do something with item
+});
+```
+
+**indexOf() and includes():**
+
+- `arr.indexOf(item, from)` – looks for item starting from index from, and returns the index where it was found, otherwise -1.
+- `arr.includes(item, from)` – looks for item starting from index from, returns true if found.
+
+```javascript
+let arr = [1, 0, false];
+
+alert(arr.indexOf(0)); // 1
+alert(arr.indexOf(false)); // 2
+alert(arr.indexOf(null)); // -1
+
+alert(arr.includes(1)); // true
+```
+
+- `includes` is that it correctly handles **NaN**, unlike `indexOf/lastIndexOf`.
+
+```javascript
+const arr = [NaN];
+alert(arr.indexOf(NaN)); // -1 (should be 0, but === equality doesn't work for NaN)
+alert(arr.includes(NaN)); // true (correct)
+```
+
+**find(fn) and findIndex():**
+
+- `find(fn)`method find an object with the specific condition.
+- `findIndex()` method is same like `find`, but returns the index instead of a value.
+
+syntax:
+
+```javascript
+let result = arr.find(function (item, index, array) {
+  // if true is returned, item is returned and iteration is stopped
+  // for falsy scenario returns undefined
+});
+```
+
+Example:
+
+```javascript
+let users = [
+  { id: 1, name: "John" },
+  { id: 2, name: "Pete" },
+  { id: 3, name: "Mary" },
+];
+
+let user = users.find((item) => item.id == 1);
+
+alert(user.name); // John
+```
+
+**filter(fn):**
+
+It is also same like `find` method.`find` method looks for a single (first) element that makes the function return true but `filter` returns an array of all matching elements.
+
+```javascript
+let users = [
+  { id: 1, name: "John" },
+  { id: 2, name: "Pete" },
+  { id: 3, name: "Mary" },
+];
+
+// returns array of the first two users
+let someUsers = users.filter((item) => item.id < 3);
+
+alert(someUsers.length); // 2
+```
+
+**map():**
+
+`map()`method calls the function for each element of the array and returns the array of results.
+
+```javascript
+let lengths = ["Bilbo", "Gandalf", "Filter"].map((item) => item.length);
+alert(lengths); // 5,7,6
+```
