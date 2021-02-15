@@ -2,6 +2,10 @@
 
 - [Home](/#hi-i39m-shruthi-thupakula-👋)
 
+- AWS
+
+  - [OS](pages/aws/os.md)
+
 - Javascript
 
   - [Introduction](pages/javascript/intro.md)
