@@ -24,7 +24,6 @@
 ## Router & Switch
 
 **Router:** A router is a networking device that connects a local network to other local networks. It is used to identify the shortest path between source and destination by connecting different networks.It works on network layer.
-
 **Switch:** A switch is a device that is used to connect many devices together on a computer network. It works on data link layer.
 
 **Differences between Router & Switch:**
