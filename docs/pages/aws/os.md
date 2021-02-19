@@ -1,20 +1,3 @@
-## OSI Model
-
-- The OSI Model (Open Systems Interconnection Model) is a conceptual framework used to describe the functions of a networking system.
-- The OSI model characterizes computing functions into a universal set of rules and requirements in order to support interoperability between different products and software.
-- The OSI model has 7 Layers:
-
-1.  **Physical Layer:** An application that communicates with other computers that corresponds to the application's communication service.
-    - It is responsible for sending bits from one computer to another. It deals with the physical connectivity of two different stations. And it provides its services to Data-link layer.
-1.  **Data Link Layer:** It defines how to transfer data on a single link.
-    - It takes the data bits and “frames,” and creates packets of the data. It transmits bits via the physical layers.
-1.  **Network Layer:** This layer defines the end-to-end packet transport, which defines the logical addresses.
-    - It delivers packets from source to destination across multiple links (networks). It also divides the outgoing messages into packets and to assemble incoming packets into messages for higher levels.
-1.  **Transport Layer:** It has a responsible for delivering data to the appropriate application process on the host computers.
-1.  **Session Layer:** It controls the connections between computers.
-1.  **Presentation Layer:** The main function of this layer is to define the data format and encryption. And it prepares data for the application layer.
-1.  **Application Layer:** An application that communicates with other computers that corresponds to the application's communication service. It is used by end-user software such as web browsers and email clients.
-
 ## Network Protocols
 
 - It has set of rules that determines how data is transmitted between different devices in the same network.
@@ -35,31 +18,71 @@
 1.  **Telnet:** Telnet is a set of rules designed for connecting one system with another. The connecting process here is termed as remote login. The system which requests for connection is the local computer, and the system which accepts the connection is the remote computer.
 1.  **Gopher:** Gopher is a collection of rules implemented for searching, retrieving as well as displaying documents from isolated sites. Gopher also works on the client/server principle.
 
-## Deadlock
+## Boot Process
 
-- In general deadlock is a problem where two or more processes are blocked.
-- It is a situation when 2 processes sharing the same resource are effectively preventing each other from accessing the resources.
-- Conditions for Deadlock- Mutual Exclusion, Hold and Wait, No preemption, Circular wait.
+The Boot process of a computer is when we power the motherboard "ON" and it turns on the BIOS (chip), which controls our input-output with the computer completely. The BIOS then select a drive to Boot to (drive C: most likely) and the system powers on. Windows or the operating system then takes over and controls all the components: CPU, GPU, drives, drivers, etc.
 
-## SSL
+- Basically “Boot Process” A CPU gets its instructions from memory. The CPU reads instruction from the BIOS and searches for the hard disks, CD drives and other hardware. The BIOS program looks at the first sector for boot code.
+- Linux have 6 stages of Boot:
 
-- It stands for Secure Sockets Layer.
-- This protocol for web browsers and servers that allows for the authentication, encryption and decryption of data sent over the Internet.
-- when SSL is used to secure communication between a web browser and a web server. This turns a website's address from HTTP to HTTPS, the 'S' standing for 'secure'.
-- It is used to secure credit card transactions, data transfer and logins.
+1. BIOS ( Basic Input/Output System )
+1. MBR ( Master boot Record )
+1. GRUB ( Grand Unified Boot Loader )
+1. Kernel
+1. init
+1. run level ( init 0 — init 6 )
 
-**SSL Handshake**
+## Memory Management
 
-- The main purpose of an SSL handshake is to provide privacy and data integrity for communication between a server and a client. During the Handshake, server and client will exchange important information required to establish a secure connection.
+In operating systems, memory management is the function responsible for managing the computer's primary memory.
 
-## TCP Handshake
+- The memory management function keeps track of the status of each memory location, either allocated or free.
+- It determines how memory is allocated among competing processes and how much they are allowed.
+- When memory is allocated it determines which memory locations will be assigned.
+- It tracks when memory is unallocated and updates the status.
 
-**TCP 3-Way Handshake Process:** TCP uses the 3-way handshake process to establish a connection between two devices before transmitting the data. After the establishment of the connection, the data transfer takes place between the devices.
+**Paging:**
 
-1. Synchronize: Client sends the Synchronize to the server.
-1. Synchronize and Acknowledge: Server replies with the Synchronize and Acknowledge to the client.
-1. Acknowledgement: Client sends the ACK to the server.
+- Paging is a method of writing and reading data from a secondary storage(Drive) for use in primary storage(RAM). - When a computer runs out of RAM, the operating system (OS) will move pages of memory over to the computer’s hard disk to free up RAM for other processes.
+- This ensures that the operating system will never run out of memory and crash. Too much reliance on memory paging can impair performance, however, because random access memory operates much faster than disk memory.
+- This means the operating system has to wait for the disk to catch up every time a page is swapped; the more a work.
 
-- After which the connection needs to be terminated, which is also done by using the 3-way handshake process. The secure and reliable connection is established to reserve the CPU, buffer, and bandwidth of the devices to communicate properly.
-- It is a must to free these resources by terminating the connection after data transmission.
-- TCP 3-way handshake process can be used to establish and terminate connections in the network in a secure way.
+**Segmentation:**
+
+- Segmentation is a virtual process that creates address spaces of various sizes in a computer system, called segments. Each segment is a different virtual address space that directly corresponds to process objects.This process speed retrieval.
+
+**Framing:**
+
+- Framing is the smallest unit of data for memory management in a virtual memory operating system. A frame refers to a storage frame. In terms of physical memory it is a fixed sized block in physical memory space
+
+**Virtual Memory:**
+Virtual memory is an area of a computer system’s secondary memory storage space (such as a hard disk or solid state drive) which acts as if it were a part of the system’s primary memory(RAM).
+
+- Virtual memory is a portion of an HDD or SSD that is reserved to emulate RAM.
+
+## Buffer & Caching
+
+- Buffer: Buffer temporarily stores data that is being transmitted from one place to another. The act of storing data temporarily in the buffer is called buffering.Buffering helps in matching the speed between the sender and receiver of the data stream. If the sender’s transmission speed is slower than receiver, then a buffer is created in main memory of the receiver, and it accumulates the bytes received from the sender.
+
+- Caching : Cache is a memory implemented in the processor that stores the copy of original data. The idea behind caching is that the recently accessed disk blocks must be stored in the cache memory so that when the user again needs to access the same disk blocks, it can be handled locally through cache memory avoiding the network traffic.
+- Buffering vs Caching:
+  - Buffer always carry the original data to be sent to the receiver. However, cache carries the copy of original data.
+
+## NTP
+
+- Network Time Protocol is used to synchronize computer clock times in a network.
+- NTP is an Internet standard protocol.
+- NTP applies to both the protocol and the client-server programs that run on computers.
+- NTP provides an accurate timing mechanism using Coordinated Universal Time (UTC).
+
+**Managing Users and groups:**
+
+These operations are performed using the following commands:
+
+- adduser : add a user to the system.
+- userdel : delete a user account and related files.
+- addgroup : add a group to the system.
+- delgroup : remove a group from the system.
+- usermod : modify a user account.
+- chage : change user password expiry information.
+- sudo: run one or more commands as another user
